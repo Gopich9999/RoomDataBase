@@ -3,11 +3,9 @@ package com.example.roomdatabase.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "user_table")
+@Entity
 data class User(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int,
-    val firstName: String,
-    val lastName: String,
-    val age: Int
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val username: String,
+    val password: String
 )
